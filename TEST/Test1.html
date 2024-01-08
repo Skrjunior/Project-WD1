@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><title>Marek Lukáč Junior</title>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  header svg {
+    height: 50px; 
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px; 
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a.active {
+  color: #FC5C65; 
+}
+.intermediate-image img {
+    width: 100%; 
+    height: 450px; 
+    display: block; 
+    margin: 0 auto; 
+    object-fit: cover; 
+}
+.content {
+      padding: 20px;
+      text-align: center; 
+    }
+
+    .content h2 {
+      color: #FC5C65; 
+      margin-bottom: 20px; 
+    }
+
+    .games-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; 
+    }
+
+    .game-item {
+      margin: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+      transition: 0.3s; 
+      width: 200px; 
+    }
+
+    .game-item:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+    }
+
+    .game-item img {
+      width: 100%; 
+      height: auto; 
+    }
+
+    .game-item h3 {
+      padding: 2px 16px; 
+    }
+
+
+.menu a:hover {
+  color: #FC5C65; 
+}
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container input[type='text'] {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .social-icons img {
+    width: 15px; 
+    margin-left: 10px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+  
+  
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    font-family: Montserrat, Arial, sans-serif; 
+  }
+  
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="image2vector (7).svg" width="30" height="20" alt="Logo">
+    <h2>Marek Lukáč Junior</h2>
+  </div>
+  <ul class="menu">
+    <li><a href="domov.html" ><h3>Domovská stránka</h3></a></li>
+    <li><a href="o_mne.html"><h3>O mne</h3></a></li>
+    <li><a href="anime_filmy_seriale.html"><h3>Anime, filmy a seriály</3></a></li>
+    <li><a href="hry.html" class="active"><h3>Hry</h3></a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Hľadať...">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/marek.lukac.129"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/better_off_dea0/"><img src="instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="https://discord.gg/F2r7e4uX"><img src="discord-svgrepo-com.svg" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="steam-svgrepo-com.svg" alt="Steam"></a>
+    </div>
+  </div>
+</header>   
+<div class="intermediate-image">
+    <img src="6bd2f0e0-224f-464d-85e0-021b550687ba.jpg" alt="Doom" >
+  </div>   
+</body>
+<div class="content">
+    <h2>Hry</h2>
+    <p>Od malá som hrál hry a nejako ma to neprestalo baviť, dáhral som mnohé a nejaké mám rozohrané.Bavia ma rôzne žánre (fps,RPG,strategy...). Moje najobľúbenejšie herné serie sú Doom, Witcher, Far Cry (ale nie každý diel),Metro, Fallout a Wolfenstein.</p>
+    <div class="games-grid">
+        <a href="https://store.steampowered.com/app/412020/Metro_Exodus/" >
+      <div class="game-item">
+         <img src="wallpaperflare.com_wallpaper (2).jpg" alt="Metro Exodus">
+        </a>
+        <h3>Metro Exodus</h3>
+      </div>
+      <div class="game-item">
+        <a href="https://store.steampowered.com/app/220240/Far_Cry_3/" >
+        <img src="wp1843184-far-cry-3-wallpapers.jpg" alt="Far Cry 3">
+       </a>
+        <h3>Far Cry 3</h3>
+      </div>
+      <div class="game-item">
+        <a href="https://store.steampowered.com/app/292030/Zaklna_3_Divok_hon/" ></a>
+        <img src="wp1854628-the-witcher-3-wallpapers.jpg" alt="Witcher 3">
+      </a>
+        <h3>Witcher 3</h3>
+      </div>
+      <div class="game-item">
+        <a href="https://store.steampowered.com/app/377160/Fallout_4/" ></a>
+        <img src="wallpaperflare.com_wallpaper (1).jpg" alt="Fallout 4">
+        </a>
+        <h3>Fallout 4</h3>
+      </div>
+      <div class="game-item">
+        <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ></a>
+        <img src="wallpaperflare.com_wallpaper.jpg" alt="Doom Eternal">
+        </a>
+        <h3>Doom Eternal</h3>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer">
+  <p>2023 - 2024, Marek Lukáč Junior</p>
+</footer>
+</div>
+</body>
+</html>

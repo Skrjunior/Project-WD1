@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        .flexbox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+             align-items: center;
+           height: 100vh; 
+ 
+        }
+        body {
+    font-family: Montserrat, Arial, sans-serif; 
+    color: #000000; 
+}
+.info-title {
+    color: #FC5C65; 
+    margin-bottom: 10px; 
+  }
+        .container, .map-container {
+            background: #ffffff;
+            margin-top: 1.6949152542%;
+            flex-basis: 32.2033898305%;
+            width: 48%; 
+            margin:  auto; 
+        }
+
+        .map-container {
+            position: relative; 
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 1.6949152542% auto; 
+         width: 48%;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 500px;
+            width: 100%;
+            max-height: 400px;
+            height: 100%;
+            border: 1px solid black;
+        }
+
+        body {
+            font-family: Montserrat, Arial, sans-serif;
+            color: #000000;
+        }
+
+        .info-title {
+            color: #FC5C65;
+            margin-bottom: 10px;
+        }
+
+        .gallery__item {
+            background: #ACB2BD;
+            margin-top: 1.6949152542%;
+            width: 48%; 
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">  
+        <div class="container">
+            <h2 class="info-title">Informácie o mne</h2>
+            <p>
+                Volám sa Marek Lukáč. Narodil som sa 27.3.2000 vo Vranove nad Topľou. Takže národnosťou som Slovák.
+                Bývam v Rudlove. Rudlov sa nachádza na východnom Slovensku. Preto mi tak nejde niekedy dobre slovenčina,
+                lebo u nás doma sa často rozpráva po "východnarsky", ale to som odbiehol. Som študentom 
+                <span style="letter-spacing:normal; text-decoration:underline;">
+                    <a href="https://www.ku.sk/" target="_blank" rel="noreferrer noopener">Katolíckej univerzity v Ružomberku.</a>
+                </span>
+            </p>
+        </div>
+        <div class="container map-container">
+            <h2 class="info-title">Môj domov v Rudlove</h2>
+            <iframe 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=21.570083618164066%2C48.92242451348837%2C21.57321453094483%2C48.92321517250578&layer=mapnik&marker=48.92281984300041%2C21.571649074554443" 
+                style="border: 1px solid black" scrolling="no" marginHeight="0" marginWidth="0">
+            </iframe>
+            <br/>
+            <small>
+                <a href="https://www.openstreetmap.org/?mlat=48.92282&mlon=21.57163#map=18/48.92282/21.57163">Zobraziť väčšiu mapu</a>
+            </small>
+        </div>
+        
+    </div>
+</body>
+</html>

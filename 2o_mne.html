@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><title>Marek Lukáč Junior</title>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+     }
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px;
+  }
+  header svg {
+    height: 50px; 
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a.active {
+  color: #FC5C65; 
+}
+.menu a:hover {
+  color: #FC5C65; 
+}
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container input[type='text'] {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .social-icons img {
+    width: 15px; 
+    margin-left: 10px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+}
+    .container1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+  }
+  .image-section1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section1 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .text-section1 {
+   
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+  .title1 {
+    color: #FC5C65;
+    
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .content1 {
+    line-height: 1.6;
+  
+  }
+
+  .container2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+  .image-section2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .text-section2 {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; 
+  }
+  .title2 {
+    color: #FC5C65;
+    
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .content2 {
+    line-height: 1.6;
+  }    
+  .map-section2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .map-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .flex-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.youtube-video, .facebook-video {
+    flex: 1; 
+}
+
+@media (max-width: 768px) {
+    .flex-container2 {
+        flex-direction: column;
+    }
+    
+    .youtube-video, .facebook-video, .content {
+        flex: none; 
+    }
+}
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    font-family: Montserrat, Arial, sans-serif; 
+  }
+  mark {
+  background-color: yellow;
+  color: black;
+  display: inline-block; 
+}
+</style>
+<script>
+  function search() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  if (!input.trim()) {
+    
+    return;
+  }
+
+  
+  var escapedInput = input.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  var searchRegEx = new RegExp(escapedInput, 'gi');
+
+  
+  var sections = document.querySelectorAll('.title1, .title2, .content1, .content2');
+
+  sections.forEach(function(section) {
+    var originalContent = section.getAttribute('data-original-content') || section.innerHTML;
+    section.setAttribute('data-original-content', originalContent);
+
+    
+    section.innerHTML = originalContent.replace(searchRegEx, function(match) {
+      return '<mark>' + match + '</mark>';
+    });
+  });
+}
+
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="image2vector (7).svg" width="30" height="20" alt="Logo">
+    <h2>Marek Lukáč Junior</h2>
+  </div>
+  <ul class="menu">
+    <li><a href="domov.html"><h3>Domovská stránka</h3></a></li>
+    <li><a href="2o_mne.html"class="active" ><h3>O mne</h3></a></li>
+    <li><a href="anime_filmy_seriale.html"><h3>Anime, filmy a seriály</h3></a></li>
+    <li><a href="hry.html"><h3>Hry</h3></a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Hľadať..." id="searchInput">
+    <button type="button" onclick="search()">Vyhľadať</button>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/marek.lukac.129"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/better_off_dea0/"><img src="instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="https://discord.gg/F2r7e4uX"><img src="discord-svgrepo-com.svg" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="steam-svgrepo-com.svg" alt="Steam"></a>
+    </div>
+  </div>
+</header>
+<body>
+<div class="container1">
+    <div class="text-section1">
+      <div>
+        <div class="title1"><li>O mne</li></div>
+        <div class="content1">
+          Vitajte na mojej osobnej stránke, kde nájdete stručný prehľad o mne, mojich záujmoch a aktivitách. Volám sa Marek a som vášnivým hráčom videohier, čo predstavuje nielen zdroj zábavy, ale aj platformu pre rozvoj mojich schopností a zručností. Venujem sa programovaniu, čo je odrazom mojej zvedavosti a túžby po technologických inováciách, a tiež som zapojený do tvorby dizajnov pre hry, čo mi umožňuje spojiť kreativitu s technickým umením. Moje voľné chvíle často trávim sledovaním anime, seriálov a filmov, čo ma obohacuje o rôzne kultúrne aspekty a inšpiruje ma v mojich vlastných tvorivých projektoch.
+        </div>
+      </div>
+    </div>
+    <div class="image-section1">
+        <img src="MadaraaEvilmorty.png" alt="Anime"> 
+      </div>
+  </div>
+  <div class="container2">
+    <div class="text-section2">
+      <div>
+        <div class="title2"><li>Informácie o mne</li></div>
+        <div class="content2">
+          Moje meno je Marek Lukáč a som hrdým občanom Slovenska, narodeným 27. marca 2000 vo Vranove nad Topľou. Aktuálne žijem v obci Rudlov, ktorá sa nachádza v pôvabnej časti východného Slovenska. Tento región je známy svojou jedinečnou kultúrou a dialektom, ktorý formoval môj jazykový základ. Moje výchovné prostredie mi prinieslo bohatú zmes tradičnej a modernéj slovenčiny, čo niekedy vedie k rozmanitosti v mojom jazykovom prejave. Súčasne som študentom <span style="letter-spacing:normal; text-decoration:underline;">
+            <a href="https://www.ku.sk/" target="_blank" rel="noreferrer noopener">Katolíckej univerzity v Ružomberku.</a></span><span style="letter-spacing:normal; text-decoration:none;"> kde sa venujem akademickému rastu a rozvoju mojich odborných zručností.</span>
+            
+          </span>
+        </div>
+      </div>
+    </div>
+   <div class="map-section2">
+    <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=21.570083618164066%2C48.92242451348837%2C21.57321453094483%2C48.92321517250578&layer=mapnik&marker=48.92281984300041%2C21.571649074554443" 
+    style="border: 1px solid black; width: 600px; height: 450px;"  
+    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> 
+</iframe>
+<br/>
+<small>
+    <a href="https://www.openstreetmap.org/?mlat=48.92282&mlon=21.57163#map=18/48.92282/21.57163">Zobraziť väčšiu mapu</a>
+</small>
+      </div>
+  </div>
+  <div class="flex-container2">
+    <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/srT3I_Irdcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="text-section2">
+        <div>
+          <div class="title2"><li>Moje hobby</li></div>
+          <div class="content2">
+            <p>Moje záujmy sú pestré a rozmanité, čo odráža moju širokú škálu záľub a schopností. Veľkú časť môjho voľného času venujem videohrám, čo je pre mňa nielen zdrojom zábavy, ale aj prostriedkom na rozvoj strategického myslenia a kreativity. Sledovanie seriálov, filmov a anime mi poskytuje príležitosť na kultúrne obohatenie a inšpiráciu. Programovanie a vytváranie dizajnov do hier sú odrazom mojej technickej zručnosti a umožňujú mi skombinovať technologické poznatky s estetickým cítením. Airsoft je mojou záľubou v outdoorovej aktivite, kde uplatňujem taktické schopnosti a tímovú prácu. Varenie mi zase umožňuje experimentovať s rôznymi chuťami a textúrami, a je to spôsob, ako vyjadriť kreativitu v kuchyni. Hudba je zase pre mňa zdrojom relaxácie a inšpirácie. Okrem týchto koníčkov sa venujem aj mnohým ďalším aktivitám, ktoré obohacujú môj život a rozširujú moje obzory.</p>              </div>
+        </div>
+      </div>
+    <div class="facebook-video">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarek.lukac.129%2Fvideos%2F3704656129628081&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+    </div>
+</div>
+
+  
+    <div class="container2">
+        <div class="image-section2">
+          <img src="Rodina.jpg" alt="Anime"> 
+        </div>
+        <div class="text-section2">
+          <div>
+            <div class="title2"><li>Ja a moja rodina</li>
+            </div>
+            <div class="content2">
+              Rodina je pre mňa základom môjho života a zdrojom nekonečnej podpory a inšpirácie. Hlboko si vážim každý moment strávený s mojimi blízkymi a som nesmierne vďačný za všetko, čo pre mňa urobili. Ich neustála podpora a vedenie hrajú kľúčovú úlohu v mojom osobnom a profesionálnom raste. Moja rodina ma neustále motivuje k dosahovaniu vyšších cieľov a je základným kameňom mojej životnej cesty.            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+<footer class="footer">
+  <p>2023 - 2024, Marek Lukáč Junior</p>
+</footer>
+</div>
+</body>
+</html>

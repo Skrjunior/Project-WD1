@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><title>Marek Lukáč Junior</title>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  header svg {
+    height: 50px; 
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px; 
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a.active {
+  color: #FC5C65; 
+}
+
+
+.menu a:hover {
+  color: #FC5C65; 
+}
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container input[type='text'] {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .social-icons img {
+    width: 15px; 
+    margin-left: 10px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+  .video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 25%; 
+    transform: translate(-30%, -50%); 
+    text-align: left; 
+    z-index: 100;
+    color: white;
+    max-width: 70%; 
+  
+}
+.footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    font-family: Montserrat, Arial, sans-serif; 
+  }
+  mark {
+  background-color: yellow;
+  color: black;
+  display: inline-block; 
+}
+
+</style>
+<script>
+function search() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var contentElement = document.querySelector('.content');
+  
+ 
+  var originalContent = contentElement.getAttribute('data-original-content') || contentElement.innerHTML;
+  contentElement.setAttribute('data-original-content', originalContent);
+
+  
+  if (!input.trim()) {
+    contentElement.innerHTML = originalContent;
+    return; 
+  }
+
+ 
+  var escapedInput = input.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  var searchRegEx = new RegExp(escapedInput, 'gi');
+
+  
+  contentElement.innerHTML = originalContent.replace(searchRegEx, function(match) {
+    return '<mark>' + match + '</mark>';
+  });
+}
+
+
+</script>
+<header>
+  <div class="logo">
+    <img src="image2vector (7).svg" width="30" height="20" alt="Logo">
+    <h2>Marek Lukáč Junior</h2>
+  </div>
+  <ul class="menu">
+    <li><a href="domov.html" class="active"><h3>Domovská stránka</h3></a></li>
+    <li><a href="2o_mne.html"><h3>O mne</h3></a></li>
+    <li><a href="anime_filmy_seriale.html"><h3>Anime, filmy a seriály</h3></a></li>
+    <li><a href="hry.html"><h3>Hry</h3></a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Hľadať..." id="searchInput">
+    <button type="button" onclick="search()">Vyhľadať</button>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/marek.lukac.129"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/better_off_dea0/"><img src="instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="https://discord.gg/F2r7e4uX"><img src="discord-svgrepo-com.svg" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="steam-svgrepo-com.svg" alt="Steam"></a>
+    </div>
+  </div>
+</header>
+<body>
+<video autoplay muted loop id="video-bg">
+  <source src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/534380/36d92e465af833290ff1def5b2de70c8c534a81d.mp4" type="video/mp4">
+</video>
+<div class="content">
+  <h1>Vítam vás. Táto stránka je o mne. <br> Poukazuje na to čo mám rád a kto som.</h1>
+  <p>Ďakujem za návštevu.</p>
+</div>
+</body>
+<footer class="footer">
+  <p>2023 - 2024, Marek Lukáč Junior</p>
+</footer>
+</html>

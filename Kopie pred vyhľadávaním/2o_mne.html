@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><title>Marek Lukáč Junior</title>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+     }
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px;
+  }
+  header svg {
+    height: 50px; 
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a.active {
+  color: #FC5C65; 
+}
+.menu a:hover {
+  color: #FC5C65; 
+}
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container input[type='text'] {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .social-icons img {
+    width: 15px; 
+    margin-left: 10px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+}
+    .container1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+  }
+  .image-section1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section1 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .text-section1 {
+   
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zarovná obsah na stred vertikálne */
+    align-items: center; /* Zarovná obsah na stred horizontálne */
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Zarovná text vo vnútri elementu na stred */
+}
+  .title1 {
+    color: #FC5C65;
+    
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .content1 {
+    line-height: 1.6;
+  
+  }
+
+  .container2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+  .image-section2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .text-section2 {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zarovná obsah na stred vertikálne */
+    align-items: center; /* Zarovná obsah na stred horizontálne */
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Zarovná text vo vnútri elementu na stred */
+  }
+  .title2 {
+    color: #FC5C65;
+    
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .content2 {
+    line-height: 1.6;
+  }    
+  .map-section2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .map-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    
+  }
+  .flex-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.youtube-video, .facebook-video {
+    flex: 1; /* Týmto sa zabezpečí, že oba video kontainery budú mať rovnakú šírku */
+}
+/* Pre responzívne úpravy môžete pridať media queries */
+@media (max-width: 768px) {
+    .flex-container2 {
+        flex-direction: column;
+    }
+    
+    .youtube-video, .facebook-video, .content {
+        flex: none; /* Na menších obrazovkách budú všetky položky zaberajú celú šírku */
+    }
+}
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    font-family: Montserrat, Arial, sans-serif; 
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="image2vector (7).svg" width="30" height="20" alt="Logo">
+    <h2>Marek Lukáč Junior</h2>
+  </div>
+  <ul class="menu">
+    <li><a href="domov.html"><h3>Domovská stránka</h3></a></li>
+    <li><a href="2o_mne.html"class="active" ><h3>O mne</h3></a></li>
+    <li><a href="anime_filmy_seriale.html"><h3>Anime, filmy a seriály</h3></a></li>
+    <li><a href="hry.html"><h3>Hry</h3></a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Hľadať...">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/marek.lukac.129"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/better_off_dea0/"><img src="instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="https://discord.gg/F2r7e4uX"><img src="discord-svgrepo-com.svg" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="steam-svgrepo-com.svg" alt="Steam"></a>
+    </div>
+  </div>
+</header>
+<body>
+<div class="container1">
+    <div class="text-section1">
+      <div>
+        <div class="title1">Anime</div>
+        <div class="content1">
+          Rád pozerám anime. "Anime je japonský termín pre animované televízne seriály alebo filmy, ktoré majú charakteristický štýl a estetiku." Najradšej mám Naruta, One Piece, Spy x Family, Mf ghost, JoJo's Bizarre Adventure,Death Note, Dragon Ball a One Punch Man.
+        </div>
+      </div>
+    </div>
+    <div class="image-section1">
+        <img src="MadaraaEvilmorty.png" alt="Anime"> 
+      </div>
+  </div>
+  <div class="container2">
+    <div class="text-section2">
+      <div>
+        <div class="title2">Informácie o mne</div>
+        <div class="content2">
+          Volám sa Marek Lukáč. Narodil som sa 27.3.2000 vo Vranove nad Topľou. Takže národnosťou som Slovák.
+          Bývam v Rudlove. Rudlov sa nachádza na východnom Slovensku. Preto mi tak nejde niekedy dobre slovenčina,
+          lebo u nás doma sa často rozpráva po "východnarsky", ale to som odbiehol. Som študentom 
+          <span style="letter-spacing:normal; text-decoration:underline;">
+              <a href="https://www.ku.sk/" target="_blank" rel="noreferrer noopener">Katolíckej univerzity v Ružomberku.</a>
+          </span>
+        </div>
+      </div>
+    </div>
+   <div class="map-section2">
+    <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=21.570083618164066%2C48.92242451348837%2C21.57321453094483%2C48.92321517250578&layer=mapnik&marker=48.92281984300041%2C21.571649074554443" 
+    style="border: 1px solid black; width: 600px; height: 450px;"  
+    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> 
+</iframe>
+<br/>
+<small>
+    <a href="https://www.openstreetmap.org/?mlat=48.92282&mlon=21.57163#map=18/48.92282/21.57163">Zobraziť väčšiu mapu</a>
+</small>
+      </div>
+  </div>
+  <div class="flex-container2">
+    <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/srT3I_Irdcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="text-section2">
+        <div>
+          <div class="title2">Moje hobby</div>
+          <div class="content2">
+            <p>No moje hobby sú rôzne od hrania hier, pozeranie seriálov, filmov a anime, programovania, vytvárania dizajnov do hier a ich modulácia, až po airsoft, varenie, hudbu a iné veci na ktoré si už nespomeniem.</p>              </div>
+        </div>
+      </div>
+    <div class="facebook-video">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarek.lukac.129%2Fvideos%2F3704656129628081&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+    </div>
+</div>
+
+  
+    <div class="container2">
+        <div class="image-section2">
+          <img src="Rodina.jpg" alt="Anime"> 
+        </div>
+        <div class="text-section2">
+          <div>
+            <div class="title2">Ja a moja rodina
+            </div>
+            <div class="content2">
+                Tu len v skratke veľmi si vážim svoju rodinu a je my všetkým a ďakujem za všetko čo mi dávajú, kde ma posúvajú a  pod.
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+<footer class="footer">
+  <p>2023 - 2024, Marek Lukáč Junior</p>
+</footer>
+</div>
+</body>
+</html>

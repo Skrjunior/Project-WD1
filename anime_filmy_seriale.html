@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><title>Marek Lukáč Junior</title>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  header svg {
+    height: 50px; 
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px; 
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a.active {
+  color: #FC5C65; 
+}
+
+
+.menu a:hover {
+  color: #FC5C65; 
+}
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-container input[type='text'] {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .social-icons img {
+    width: 15px; 
+    margin-left: 10px;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+  .content {
+    text-align: center;
+ }
+  .title-section {
+  background-color: #fc5c65; 
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
+}
+body {
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+.container1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  .image-section1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-section1 img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+  .text-section1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; 
+  }
+  .title1 {
+    color: #E50914;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .content1 {
+    line-height: 1.6;
+  }
+ 
+
+  .footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    font-family: Montserrat, Arial, sans-serif; 
+  }
+  mark {
+  background-color: yellow;
+  color: black;
+  display: inline-block; 
+}
+</style>
+<script>
+ function search() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  if (!input.trim()) {
+    
+    return;
+  }
+
+  
+  var escapedInput = input.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  var searchRegEx = new RegExp(escapedInput, 'gi');
+
+  
+  var sections = document.querySelectorAll('.title-section h1, .title1, .content1');
+
+  sections.forEach(function(section) {
+    
+    var originalContent = section.getAttribute('data-original-content') || section.textContent;
+    section.setAttribute('data-original-content', originalContent);
+
+    
+    section.innerHTML = originalContent.replace(searchRegEx, function(match) {
+      return '<mark>' + match + '</mark>';
+    });
+  });
+}
+
+  </script>
+<header>
+  <div class="logo">
+    <img src="image2vector (7).svg" width="30" height="20" alt="Logo">
+    <h2>Marek Lukáč Junior</h2>
+  </div>
+  <ul class="menu">
+    <li><a href="domov.html" ><h3>Domovská stránka</h3></a></li>
+    <li><a href="2o_mne.html"><h3>O mne</h3></a></li>
+    <li><a href="anime_filmy_seriale.html" class="active"><h3>Anime, filmy a seriály</h3></a></li>
+    <li><a href="hry.html"><h3>Hry</h3></a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Hľadať..." id="searchInput">
+    <button type="button" onclick="search()">Vyhľadať</button>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/marek.lukac.129"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/better_off_dea0/"><img src="instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="https://discord.gg/F2r7e4uX"><img src="discord-svgrepo-com.svg" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="steam-svgrepo-com.svg" alt="Steam"></a>
+    </div>
+  </div>
+</header>
+<div class="title-section">
+    <h1>Anime, filmy a seriály</h1>
+  </div>
+<body>
+    <div class="container1">
+        <div class="image-section1">
+          <img src="Anime.png" alt="Anime"> 
+        </div>
+        <div class="text-section1">
+          <div>
+            <div class="title1">Anime</div>
+            <div class="content1">
+              Som veľkým nadšencom anime. Ide o formu japonského animovaného umenia, známeho svojim charakteristickým vizuálnym štýlom a estetikou. Tento žáner umožňuje skúmať a vnímať z inej perspektívy rozmanité príbehy a kultúrne zvláštnosti. Medzi moje obľúbené tituly patria 'Naruto', 'One Piece', 'Spy x Family', 'Mf Ghost', 'JoJo's Bizarre Adventure', 'Death Note', 'Dragon Ball' a 'One Punch Man'. Každý daný seriál ponúka unikátne príbehy a postavy, čo odráža šírku a hĺbku žánru anime.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="container1">
+  
+    <div class="text-section1">
+      <div>
+        <div class="title1">Filmy</div>
+        <div class="content1">
+          Medzi filmové tituly, ktoré upredňostňujem patrí komédia a animovaný filmy. Obzvlášť si cením tituly ako 'Diktátor' a 'Borat', ktoré sú známe svojím satirickým pohľadom na sociálne a politické témy, pričom v sebe nesú výrazný kultúrny odkaz. Rovnako nepohrdnem ani jednoduchším odľahčeným humorom v diele, napr. 'Blbí a blbší', ktoré predstavujú klasiku americkej komédie. V oblasti animovaných filmov ma zaujali tituly ako 'Kung Fu Panda' a 'Shrek', ktoré nielenže ponúkajú vynikajúcu vizuálnu stránku, ale sú bohaté na hlboké morálne posolstvá a charakterovú rozmanitosť. Tieto filmy sú pre mňa viac než len zábavou; sú to diela, ktoré skúmajú rôzne aspekty ľudskej povahy a spoločenských interakcií.
+        </div>
+      </div>
+    </div>
+    <div class="image-section1">
+      <img src="Filmy.png" alt="Anime"> 
+    </div>
+     </div>
+  
+    <div class="container1">
+        <div class="image-section1">
+          <img src="Serialypng.png" alt="Anime"> 
+        </div>
+        <div class="text-section1">
+          <div>
+            <div class="title1">Seriály</div>
+            <div class="content1">
+              Medzi moje obľúbené televízne seriály patria diela, ktoré sa vyznačujú originálnosťou, kreativitou a často aj hlbokým filozofickým podtextom. 'Love, Death & Robots' je vynikajúcim príkladom inovatívneho prístupu k animácii, kde každá epizóda predstavuje unikátny príbeh so svojou estetikou a naratívom. 'Rick a Morty' zase ponúka inteligentný humor zmiešaný s vedeckofantastickými prvkami, ktorý núti diváka zamyslieť sa nad existenciálnymi otázkami. Titul 'Rozčarování' odhaľuje šarm tradičnej animácie v spojení s moderným humorom a satirou. Dielo 'Gravity Falls' je vynikajúci príklad ako môže animovaný seriál osloviť široké publikum svojou záhadnosťou a komplexnými postavami. 'Captain Fall' a 'Inside Job' sú tiež príkladmi seriálov, ktoré spájajú zábavu s inteligentným scenáristickým spracovaním a originálnym pohľadom na svet a spoločenské dianie. Tieto seriály odzrkadľujú v celistvosti charakterizuju moju identitu Sú inšpiratívne, zábavné a zároveň ponúkajú hlbší pohľad do rôznych aspektov ľudskej existencie.
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+<footer class="footer">
+  <p>2023 - 2024, Marek Lukáč Junior</p>
+</footer>
+</html>
